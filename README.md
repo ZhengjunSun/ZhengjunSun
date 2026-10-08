@@ -1,50 +1,42 @@
-# Hi, I'm SunZhengjun 👋
+# SunZhengjun · 工业场景多智能体与大模型应用
 
-I build **multi-agent systems and production-oriented LLM applications**, with experience in
-telecom log intelligence, refinery decision optimization, crude procurement, and legal AI.
+关注通信故障分析、炼厂与原油采购决策、可追溯知识应用。
+工程重点：任务编排、优化约束、证据检索、评测与人工审批。
 
-My focus is the engineering around models: workflow orchestration, retrieval, optimization,
-evaluation, observability, safety boundaries, and human-in-the-loop decision making.
+Multi-agent & LLM application engineering for industrial workflows.
 
-## Featured projects
+教育背景：北京邮电大学本科 · 中国人民大学硕士 · 计算机科学与技术。
 
-### [Telecom Log Agent](https://github.com/ZhengjunSun/telecom-log-agent)
+## 代表方向
 
-Auditable multi-agent incident triage for synthetic telecom logs. It combines log-template
-normalization, anomaly evidence, topology reasoning, runbook matching, a critic agent, and
-approval-gated remediation.
+| 项目 | 当前实现 | 验证与边界 |
+|---|---|---|
+| [通信日志](https://github.com/ZhengjunSun/telecom-log-agent) | 日志预处理、规则驱动分析、故障证据报告 | 合成示例与测试；尚非生产根因诊断系统 |
+| [炼厂决策](https://github.com/ZhengjunSun/refinery-decision-agents) | 整数批次枚举优化、约束检查、决策说明 | 可运行示例；尚非工业规模求解器 |
+| [Agent 记忆评测](https://github.com/ZhengjunSun/agent-memory-bench) | SQLite 事实检索与合成评测 | [报告与局限](https://github.com/ZhengjunSun/agent-memory-bench/blob/main/docs/benchmark.md)；满分不代表真实对话泛化 |
 
-`Python` · `Multi-Agent` · `AIOps` · `FastAPI` · `Docker`
+## 工程原型与实验
 
-### [Refinery Decision Agents](https://github.com/ZhengjunSun/refinery-decision-agents)
+- [工业 Agent 工作台](https://github.com/ZhengjunSun/industrial-superagent-workbench)：固定规则规划、顺序执行、SQLite 状态与审批、浏览器控制台。单进程原型，不是分布式平台。
+- [多模态运维助手](https://github.com/ZhengjunSun/multimodal-ops-copilot)：文件接入、模型适配与进度流；不是完整实时语音系统。
+- [法律 RAG](https://github.com/ZhengjunSun/prosecution-legal-rag)：虚构材料上的检索、引用与拒答演示，不提供法律意见。
+- [模型网关](https://github.com/ZhengjunSun/llm-gateway-control-plane)、[上下文实验](https://github.com/ZhengjunSun/context-engineering-bench)、[A2A 风格实验](https://github.com/ZhengjunSun/a2a-agent-network)：独立工程练习，能力以代码为准。
+- [执行准入策略](https://github.com/ZhengjunSun/secure-agent-sandbox)：检查请求，不提供运行时隔离。
+- [LoRA 实验准备](https://github.com/ZhengjunSun/domain-lora-training-lab)：数据与配置准备，尚未提供训练权重及实测提升。
 
-Explainable crude-procurement and refinery-planning demo. Mathematical optimization produces the
-plan while specialized agents surface assumptions, supply risks, constraint checks, and decision
-rationale.
+## 当前建设重点（尚未完成）
 
-`Python` · `Optimization` · `Decision Intelligence` · `Supply Chain` · `Agents`
+1. 通信事故端到端回放：规则基线、Agent 对比、失败恢复与审批回归。
+2. 炼厂求解器接入：不可行案例与敏感性分析。
+3. 记忆困难评测：相似实体、时间更新、无答案问题与逐条失败报告。
 
-### [Prosecution Legal RAG](https://github.com/ZhengjunSun/prosecution-legal-rag)
+## 开源协作
 
-Citation-first legal research workflow using fictional materials. It demonstrates retrieval,
-grounded drafting, citation verification, abstention, and mandatory professional review.
+[llmsectest #17](https://github.com/wehnsdaefflae/llmsectest/pull/17)：OWASP 示例标签与回归测试贡献。状态以 PR 页面为准，不将提交等同于合并。
 
-`Python` · `RAG` · `Legal AI` · `Responsible AI` · `Evaluation`
+## 实现原则与来源
 
-## Engineering principles
+LLM 负责解释与协调；确定性代码、优化求解和人工审批约束关键决策。
+离线测试、真实模型实验与生产验证是不同证据，不互相替代。
 
-- Agents should have bounded roles, typed state, observable decisions, and measurable outcomes.
-- LLMs explain and coordinate; deterministic code and optimization enforce hard constraints.
-- Enterprise AI needs evaluation, access control, auditability, and human approval by design.
-- Public demonstrations should use synthetic or openly licensed data, never confidential material.
-
-## Current interests
-
-Multi-agent orchestration · Agent evaluation · RAG quality · LLM observability · MCP ·
-AI-assisted operations research · Private and local model deployment
-
----
-
-The featured repositories are independent portfolio reconstructions built with public or synthetic
-data. They do not contain proprietary code, customer data, or internal materials from any employer
-or client.
+这些作品是独立公开技术重建与实验，使用合成或合法公开材料，不包含雇主或客户的代码、数据、内部规则和配置，不代表其生产系统或业务效果。
